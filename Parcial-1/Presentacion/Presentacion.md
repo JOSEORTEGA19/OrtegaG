@@ -39,6 +39,6 @@ Me gustaria especializarme en el manejo de datos, bases de datos y analisis de i
 - Trabajar.
 - Escuchar Musica.
 
-> "Si lo puedes imaginar, lo puedes programar." (Alejandro Taboada Sanchez.) 
+> "No es vergüenza no saber, sino saber que no sabes y no querer saber" (B. L. T. )
 
 [Carita feliz] (https://emojiterra.com/es/sonrisa/) "Carita Feliz"
