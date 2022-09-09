@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: navy;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul{
+    list-style-type: circle;
+    width: 200px;
+    height: 500px;
+}
+ul > li > ul {
+
+    display: none;
+}
+
+ul > li:target > ul{
+    display: block;
+    height: 100%;
+}
+
+.Opcion {
+    background: blue;
+    color: yellow;
+    border: 10px solid black;
+    padding: 50px;
+    
+}
+
+a {
+    color: yellow;
+    text-decoration: black  ;
+}
+.SubOpcion {
+    padding-left: 50px;
+    background: aquamarine;
+    color: black;
+    text-align: justify;
+    text-overflow: clip;
+    margin-bottom: 20px;
+    
+}
+
+h1{
+    font-size: 200%;
+    text-align: center;
+    background-color: blueviolet;
+    border-radius: 20px;
+    font-style: italic;
+}
