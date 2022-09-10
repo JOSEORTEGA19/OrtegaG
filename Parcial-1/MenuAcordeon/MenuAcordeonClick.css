@@ -26,6 +26,7 @@ ul > li:target > ul{
     color: yellow;
     border: 10px solid black;
     padding: 50px;
+    margin: 20px;
     
 }
 
