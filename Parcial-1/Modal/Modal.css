@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: orange;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul{
+    list-style-type: circle;
+    width: 200px;
+    height: 500px;
+}
+ul > li > ul {
+
+    display: none;
+}
+
+ul > li:target > ul{
+    display: block;
+    height: 100%;
+}
+
+.Opcion{
+    background: whitesmoke;
+    color: black;
+    border: 10px solid black;
+    padding: 10px;
+    margin: 20px;
+    width: 200%;
+}
+
+a {
+    color: black;
+    text-decoration: black  ;
+}
+.SubOpcion {
+    padding: 0;
+    width: 200px;
+    background: orange;
+    color: rgb(0, 0, 109);
+    text-align: center;
+    text-overflow: clip;
+    margin-left: 50%;
+}
+
+h1{
+    font-size: 200%;
+    text-align: center;
+    background-color: beige;
+    border-radius: 20px;
+    font-style: italic;
+    border: 10px solid black;
+}
+
+.ventanaModal{
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: silver;
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.ventanaModal:target{
+opacity: 1;
+pointer-events: auto;
+}
+
+.ventanaModal > div{
+
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px;
+    border-radius: 10px;
+    background: black;
+}
+.ventanaModal{
+    background-color: darkgoldenrod;
+    color: black;
+text-align: center;
+}
+.botonAbrir:hover{
+    background-color: rgb(105, 5, 5);
+    color: red;
+}
+.botonCerrar:hover{
+    background-color: rgb(105, 5, 5);
+    color: red;
+}
+
+p:hover{
+background-color: yellow;
+}

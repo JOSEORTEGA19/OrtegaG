@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
     background-image: url("https://www.pinterest.com/pin/752030837770812622/");
-
+    color: greenyellow;
+    text-decoration-line: underline;
+    
 }
 .contenedor{
    background-color: yellow; 
@@ -25,6 +27,7 @@
     background-repeat:no-repeat;
     padding: 50px;
     text-decoration: red;
+    
     
 
 }
