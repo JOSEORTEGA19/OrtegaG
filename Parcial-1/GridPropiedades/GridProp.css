@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: gold;
 }
 
 .contenedor{
@@ -24,7 +23,7 @@
 
  .caja{
 
-    border: 1px solid BLUE;
+    border: 5px solid rgb(2, 50, 82);
     float: left;
    text-align: center;
     color: beige;
@@ -32,15 +31,25 @@
 
  }
 
- #caja1{grid-area: menulat;}
+ #caja1{grid-area: menulat;
+    text-align: justify;
+    color: rgb(4, 37, 37);
+    padding: 15px;
+    background-color: rgb(0, 111, 155);
+}
  #caja2{grid-area: encabezado;
+    color: rgb(4, 37, 37);
  }
- #caja3{grid-area: columna1;}
-#caja4{grid-area: columna2;}
+ #caja3{grid-area: columna1;
+color: rgb(4, 37, 37);}
+#caja4{grid-area: columna2;
+    color: rgb(4, 37, 37);}
 #caja5{grid-area: piepagina;}
 #caja6{grid-column-start: 1;
-    grid-column-end: 4;
-grid-area: enlace;} 
+    grid-column-end: 2;
+grid-area: enlace;
+text-align: center;
+} 
 #caja7{grid-column-start: 1;
         grid-column-end: 4;
     grid-area: enlace2;}
@@ -48,7 +57,27 @@ grid-area: enlace;}
             grid-column-end: 4;
         grid-area: enlace3;}
 h1{
-background-color: cornflowerblue;
+background-color: rgb(12, 78, 34);
 color: beige;
 text-align: center;
         }
+h2{
+    padding: 50px;
+    background-color: cadetblue;
+}
+
+h3{
+    text-align: justify;
+    padding: 20px;
+    background-color:cadetblue;
+    border: 1px solid rgb(2, 50, 82);
+
+}
+h4{
+    text-align: justify;
+    height: 100%;
+    padding: 10px;
+    background-color: rgb(238, 198, 65);
+    color: black;
+    border: 1px solid rgb(2, 50, 82);
+}
