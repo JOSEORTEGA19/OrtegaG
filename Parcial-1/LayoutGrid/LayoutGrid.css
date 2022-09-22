@@ -9,12 +9,12 @@
     width: 100vw;
     height: 100vh;
     background-color: aqua;
-    grid-template-columns: 30% 30% 40%;
-    grid-template-rows: 15% 70% 15%;
-    grid-template-areas: 'menulat encabezado encabezado'
+    /*grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 15% 70% 15%;*/
+    /*grid-template-areas: 'menulat encabezado encabezado'
                          'menulat columna1 columna2'
                          'menulat piepagina piepagina'
-                         'enlace enlace2 enlace3';
+                         'enlace enlace2 enlace3';*/
     justify-content: stretch;    
     align-content: stretch;
     justify-items: stretch;
@@ -46,7 +46,7 @@ color: rgb(4, 37, 37);}
     color: rgb(4, 37, 37);}
 #caja5{grid-area: piepagina;}
 
-#caja6{grid-column-start: 1;
+/*#caja6{grid-column-start: 1;
     grid-column-end: 2;
 grid-area: enlace;
 } 
@@ -55,7 +55,7 @@ grid-area: enlace;
     grid-area: enlace2;}
 #caja8{grid-column-start: 1;
             grid-column-end: 4;
-        grid-area: enlace3;}
+        grid-area: enlace3;}*/
 h1{
 background-color: rgb(12, 78, 34);
 color: beige;
@@ -97,4 +97,14 @@ h1:hover{
     background-color: rgb(122, 248, 210);
     color: rgb(2, 28, 34);
 }
-
+@media screen and (max-width: 900px)
+{
+    .contenedor{
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 100px 300px 300px 100px;
+        grid-template-areas: 'encabezado encabezado'
+                             'menulat columna1'
+                             'menulat columna2'
+                             'piepagina piepagina';
+    }
+}
