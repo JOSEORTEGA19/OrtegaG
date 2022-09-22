@@ -48,7 +48,6 @@ color: rgb(4, 37, 37);}
 #caja6{grid-column-start: 1;
     grid-column-end: 2;
 grid-area: enlace;
-text-align: center;
 } 
 #caja7{grid-column-start: 1;
         grid-column-end: 4;
