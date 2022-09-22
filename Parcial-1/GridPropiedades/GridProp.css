@@ -47,3 +47,8 @@ grid-area: enlace;}
 #caja8{grid-column-start: 1;
             grid-column-end: 4;
         grid-area: enlace3;}
+h1{
+background-color: cornflowerblue;
+color: beige;
+text-align: center;
+        }
