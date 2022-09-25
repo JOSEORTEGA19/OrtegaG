@@ -49,6 +49,12 @@ color: rgb(4, 37, 37);}
 #caja5{grid-area: piepagina;
     color: rgb(4, 37, 37);}
 
+#caja1:hover{
+width: 700%;
+transition: width 5s ease-out;
+background-color: blueviolet;
+}    
+
 @media screen and (max-width: 900px ) {
     .contenedor{
         grid-template-columns: 30% 70%;
