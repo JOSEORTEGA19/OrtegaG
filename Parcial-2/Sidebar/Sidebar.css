@@ -10,7 +10,7 @@
 }
 div.sidebar {
     float: left;
-    background-color: grey;
+    background-color: whitesmoke;
     width: 200px;
     height: 100%;
     overflow: auto;
@@ -23,13 +23,13 @@ a {
     padding: 5px;
 }
 a:hover {
-    background-color: blue;
+    background-color: greenyellow;
     color: white;
 }
 div.content {
     float: left;
     width: calc(100% - 200px);
-    background-color: aqua;
+    background-color: yellow;
     padding: 1px 16px;
     height: 100%;
 }
