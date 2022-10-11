@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: gold;
+}
+.contenedor{
+   display: flex;
+   width: 100vw;
+   height: 100vh;
+   background-color: aqua;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+
+.caja {
+    border: 2px solid BLUE;
+    height: 100px;
+    margin: 2px;
+    width: 100px;
+    float: left;
+   text-align: center;
+    color: beige;
+    background-color: brown;
+
+}
+#Caja1 {
+    align-self: flex-end;
+    flex-grow: 1;
+}
+#Caja2 {
+    align-self: flex-end;
+    flex-grow: 2;
+}
+#Caja3 {
+    align-self: flex-end;
+    flex-grow: 3;
+}
+#Caja4 {
+    align-self: flex-end;
+    flex-grow: 4;
+}
+#Caja5 {
+    align-self: flex-end;
+    flex-grow: 5;
+}
+#Caja6 {
+    align-self: flex-end;
+    flex-grow: 6;
+}
+#Caja7 {
+    align-self: flex-end;
+    flex-grow: 7;
+}
+#Caja8 {
+    align-self: flex-end;
+    flex-grow: 8;
+}
+
+h1{
+
+border: 100vw salmon;
+color: darkgoldenrod;
+text-align: center;
+
+}
+
+#boton{
+    float: left;
+    border: 4px solid red;
+    width: calc((100% / 3 )- 4px);
+    height: 100px;
+    text-align: center;
+    margin: 2px;
+}
+#boton2{
+    float: left;
+    border: 4px solid red;
+    width: calc((100% / 3 )- 4px);
+    height: 100px;
+    text-align: center;
+    margin: 2px;
+}
+#boton3{
+    float: left;
+    border: 4px solid red;
+    width: calc((100% / 3 )- 4px);
+    height: 100px;
+    text-align: center;
+    margin: 2px;
+}
