@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RegistroEventos.css">
+    <script src="XMLTHTTP.Js"></script>
+    <title>FLEXBOX</title>
+</head>
+<body>
+    <h1><strong> COMPORTAMIENTO DE UNA FLEXBOX </strong></h1>
+    
+    <button id="boton" onclick="alert('Click en Caja 1')">Soy la caja 1</button>
+    <button id="boton2">Soy la caja 2</button>
+    <button id="boton3">Soy la caja 3</button>
+
+    <script>
+        document.getElementById("boton2").onclick = function(){alert("Soy la caja 2");}
+        document.querySelector("#boton3").addEventListener("click",mifuncion2);
+        
+        function mifuncion2(){
+            alert("Si se pudoooo");
+        }
+    </script>
+<div id="MyDiv">
+    <div class="contenedor">
+        <div id="caja1" class="caja"> caja 1</div>
+        <div id="caja2" class="caja"> caja 2</div>
+        <div id="caja3" class="caja"> caja 3</div>
+       
+    </div>
+</div>
+</body>
+</html>
