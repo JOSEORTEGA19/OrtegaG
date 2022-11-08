@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Modulo.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<label for="cadena">INGRESA UNA CADENA</label>
+<input id="cadena" type="text">
+<button id="btn">PROCESAR</button>
+<input id="cadenaMayuscula" type="text" disabled>
+
+<script type ="module">
+    import{mayuscula,longitud} from "./Modulo.js"
+    document.getElementById("btn").addEventListener("click",function(){
+
+        let varcad=document.getElementById("cadena").value;
+        let varcadMayuscula=mayuscula(varcad);
+        document.getElementById("cadenaMayuscula").value = varcadMayuscula;
+    });
+ </script>
+
+</body>
+</html>

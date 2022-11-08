@@ -1,0 +1,14 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aqua;
+    background-color: chartreuse;
+padding: 10px;
+}
+
+button{
+    background-color: navy;
+    color: aqua;
+}
+label{
+    background-color: navy;
+}
