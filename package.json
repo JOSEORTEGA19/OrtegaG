@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "cowsay": "^1.5.0"
-  }
+  },
+  "name": "ortegag",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JOSEORTEGA19/OrtegaG.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JOSEORTEGA19/OrtegaG/issues"
+  },
+  "homepage": "https://github.com/JOSEORTEGA19/OrtegaG#readme",
+  "description": ""
 }

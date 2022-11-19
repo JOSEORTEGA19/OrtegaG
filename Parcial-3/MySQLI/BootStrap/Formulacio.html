@@ -10,7 +10,7 @@
   <body>
     <h1>Catalogo de VideoJuegos<img src="truco.jpg" height="150" alt="/****\"> </h1> 
 
-    <form>
+    <form id="formulario">
      
     <div class="row">
 
@@ -132,8 +132,14 @@ myModalAlternative.show();
 
 
 document.getElementById("enviar").addEventListener("click",async () =>{
-  let respuesta= await fetch ('Formulario.php');
+  var datosFormulario= new FormData(document.getElementById("Formulario"));
+  let respuesta= await fetch ('Formulario.php',{
+    method: 'POST',
+    body: datosFormulario
+   })
+   
   let dato =await respuesta.json();
+
   document.getElementById("idAño").value=dato.Lanzamiento;
   document.getElementById("idNom").value=dato.Nombre;
   document.getElementById("idConsola").value=dato.Disponible;
