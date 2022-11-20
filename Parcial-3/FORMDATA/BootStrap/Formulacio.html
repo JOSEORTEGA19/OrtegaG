@@ -14,17 +14,22 @@
      
     <div class="row">
 
-    <div class="form-group col-sm-12 col-md-4 col-lg-6">
-        <label for="idAño" class="form-label">Año de lanzamiento</label>
-        <input type="text" class="form-control" id="idAño" placeholder="Año de Lanzamiento">
+      <div class="form-group col-sm-12 col-md-1 col-lg-3">
+        <label for="idID" class="form-label">ID</label>
+        <input type="number" name="idID" class="form-control" id="idID" placeholder="ID del Juego">
     </div>
 
-<div class="form-group col-sm-12 col-md-4 col-lg-2">
+    <div class="form-group col-sm-12 col-md-1 col-lg-3">
+        <label for="idAño" class="form-label">Año de lanzamiento</label>
+        <input type="text" name="idAño" class="form-control" id="idAño" placeholder="Año de Lanzamiento">
+    </div>
+
+<div class="form-group col-sm-12 col-md-5 col-lg-3">
 
         <label for="idNom" class="form-label">Nombre del VideoJuego</label>
         <input type="Nombre Aqui" class="form-control" id="idNom"></input >
     </div>
-    <div class="form-group col-sm-12 col-md-4 col-lg-4">
+    <div class="form-group col-sm-12 col-md-5 col-lg-3">
 
       <label for="idConsola" class="form-label">Disponible para los dispositvos</label>
       <input type="text" class="form-control" id="idConsola"></input >
@@ -131,20 +136,20 @@ myModalAlternative.show();
  
 
 
-document.getElementById("enviar").addEventListener("click",async () =>{
-  var datosFormulario= new FormData(document.getElementById("Formulario"));
-  let respuesta= await fetch ('Formulario.php',{
+document.getElementById("enviar").addEventListener("click", async function () {
+  var datosFormulario= new FormData(document.getElementById("formulario"));
+  let respuesta= await fetch ('Conexion.php',{
     method: 'POST',
     body: datosFormulario
    })
    
   let dato =await respuesta.json();
-
+document.getElementById("idID").value=dato.ID;
   document.getElementById("idAño").value=dato.Lanzamiento;
   document.getElementById("idNom").value=dato.Nombre;
-  document.getElementById("idConsola").value=dato.Disponible;
+  document.getElementById("idConsola").value=dato.Consola;
   document.getElementById("idPrecio").value=dato.Precio;
-  document.getElementById("idEstado").value=dato.Presentacion;
+  document.getElementById("idEstado").value=dato.Estado;
   document.getElementById("idMulti").value=dato.Crossplay;
   document.getElementById("idGoty").value=dato.Premios;
   document.getElementById("idSoporte").value=dato.Soporte;

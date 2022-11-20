@@ -1,13 +1,13 @@
 <?php
-$id= $_POST['Ano_Lanzamiento'];
+$id= $_POST['idID'];
 $servidor= "localhost";
 $basedatos = "catalogojuegos";
 $usuario = "root";
-$password ="19100229Jo-0";
+$password ="";
 $ID=2;
 
 $con = mysqli_connect($servidor, $usuario, $password, $basedatos) or die ("No se pudo conectar");
-$consulta = "select * from juego where ID=$ID";
+$consulta = "select * from juego where ID=$id";
 
 $registros = mysqli_query($con, $consulta)or die ("Problemas en el select");
 // $registros = mysqli_query($con,$consulta) or die ("Problemas con el select");
@@ -15,8 +15,7 @@ $registros = mysqli_query($con, $consulta)or die ("Problemas en el select");
 //     printf($reg['nombre'].' ')
 // }
 
-$result = mysqli_fetch_all($registros);
+$result = mysqli_fetch_array($registros,MYSQLI_ASSOC);
 
-mysqli_close($con);
 echo json_encode($result);
 ?>
