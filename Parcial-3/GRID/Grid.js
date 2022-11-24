@@ -35,4 +35,5 @@ $("#jsGrid").jsGrid({
         { name: "Married", type: "checkbox", title: "Is Married", sorting: false },
         { type: "control" }
     ]
-})});
+})
+});
