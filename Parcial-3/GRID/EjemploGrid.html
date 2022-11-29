@@ -7,13 +7,69 @@
     <title>Document</title>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <script src="./jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
-    <script src="jquery-3.6.1.min.js"></script>
-    <script src="Grid.js"></script>
+   
 
 </head>
 <body>
-    <div id="jsGrid"></div>
+
+    <form>  <div id="jsGrid"> </div></form>
+  
+    <script>
+        var juegos = [];
+
+        consulta();
+        async function consulta () {
+            let respuesta = await fetch("ConexionGrid.php")
+            let datojson = await respuesta.json();
+            
+            juegos=datojson;
+
+            console.log(datojson);
+
+            $("#jsGrid").jsGrid({
+                
+    width: "100%",
+    height: "400px",
+
+    inserting: true,
+    editing: true,
+    sorting: true,
+    paging: true,
+
+    data: juegos,
+
+    fields: [
+        
+        // { name: "Name", type: "text", width: 150, validate: "required" },
+        // { name: "Age", type: "number", width: 50 },
+        // { name: "Address", type: "text", width: 200 },
+        // { name: "Country", type: "select", items: countries, valueField: "Id", textField: "Name" },
+        // { name: "Married", type: "checkbox", title: "Is Married", sorting: false },
+        {name: "ID", type: "number", width: 70},
+        {name: "Lanzamiento", type: "text", width: 150},
+        {name: "Nombre", type: "text", width: 150},
+        {name: "Consola", type: "text", width: 150},
+        {name: "Precio", type: "text", width: 150},
+        {name: "Estado", type: "text", width: 150},
+        {name: "Crossplay", type: "text", width: 150},
+        {name: "Premios", type: "text", width: 50},
+        {name: "Soporte", type: "text", width: 150},
+        { type: "control" }
+         
+        
+       
+        
+    ]
+});
+        }
+        
+
+
+
+
+    </script>
 </body>
 </html>
