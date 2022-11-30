@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link
+      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+      rel="stylesheet"/>
+</head>
+<body>
+    <div id="wrapper"></div>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
+    <script>
+    (async ()=>{
+    let headersList = {"Accept": "*/*"
+       }
+       
+       let response = await fetch("http://localhost/OrtegaG/Parcial-3/GRIDJS/GRIDJS.php", { 
+         method: "GET",
+         headers: headersList
+       });
+       
+       let datos = await response.json();
+       console.log(datos)
+       
+    new gridjs.Grid({
+    columns: ["ID", "Lanzamiento", "Nombre","Consola","Precio","Estado","Crossplay","Premios","Soporte"],
+    data: datos
+
+    }).render(document.getElementById("wrapper"));
+
+})();
+    </script>
+</body>
+</html>
