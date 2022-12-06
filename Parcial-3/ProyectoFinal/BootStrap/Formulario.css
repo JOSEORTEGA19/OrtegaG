@@ -1,0 +1,18 @@
+*{
+    background-color: rgb(2, 1, 1);
+    color: greenyellow;
+    padding: 10px;
+    margin: 10px;
+
+}
+button {
+    background-color: greenyellow;
+    color: greenyellow;
+}
+form div{
+
+    align-items: center;
+}
+h1{text-align: center;
+
+}

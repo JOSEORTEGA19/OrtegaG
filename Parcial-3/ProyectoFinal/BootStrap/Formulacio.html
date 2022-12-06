@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PROYECTO FINAL CATALOGO JUEGOS</title>
+    <link rel="stylesheet" href="Formulario.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <h1>Catalogo de VideoJuegos<img src="truco.jpg" height="150" alt="/****\"> </h1> 
+
+    <form id="formulario" method="post" action="./Insertar.php">
+     
+    <div class="row">
+
+    <div class="form-group col-sm-12 col-md-1 col-lg-3">
+        <label for="idAño" class="form-label">Año de lanzamiento</label>
+        <input type="text" name="idAño" class="form-control" id="idAño" placeholder="Año de Lanzamiento">
+    </div>
+
+<div class="form-group col-sm-12 col-md-5 col-lg-4">
+
+        <label for="idNom" class="form-label">Nombre del VideoJuego</label>
+        <input type="Nombre Aqui" name="idNom" class="form-control" id="idNom"></input >
+    </div>
+    <div class="form-group col-sm-12 col-md-5 col-lg-3">
+
+      <label for="idConsola" class="form-label">Disponible para los dispositvos</label>
+      <input type="text" name="idConsola" class="form-control" id="idConsola"></input >
+  </div>
+</div>
+
+<div class="row">
+
+    <div class="form-group col-sm-12 col-md-12 col-lg-2">
+        <label for="idPrecio" class="form-label">Precio $:</label>
+        <input type="text" name="idPrecio" class="form-control" id="idPrecio" placeholder="$$$$">
+    </div>
+
+    
+
+<div class="form-group col-sm-5 col-md-4 col-lg-6">
+
+        <label for="idEstado" class="form-label">Estado de Presentacion</label>
+        <input type="text" name="idEstado" class="form-control" id="idEstado"></input >
+    </div>
+    <div class="form-group col-sm-4 col-md-4 col-lg-2">
+        <label for="idMulti" class="form-label">CrossPlay</label>
+        <input type="text" name="idMulti" class="form-control" id="idMulti" placeholder="Disponible">
+
+    </div>
+  </div>
+ 
+<div class="row">
+  <div class="form-group col-sm-6 col-md-6 col-lg-4">
+    <label for="idGoty" class="form-label">Premios Ganados</label>
+    <input type="text" name="idGoty" class="form-control" id="idGoty"></input >
+  </div>
+
+  <div class="form-group col-sm-6 col-md-6 col-lg-4">
+    <label for="idSoporte" class="form-label">Soporte en Linea</label>
+    <input type="text" name="idSoporte" class="form-control" id="idSoporte" placeholder="Disponible">
+  </div>
+</div>
+    
+
+
+
+
+<script>
+document.getElementById("Modal").addEventListener("click",()=>{
+    const myModalAlternative = new bootstrap.Modal('#modal',{})
+myModalAlternative.show();
+})
+</script>
+
+<div class="row">
+  <div class="form-group col-sm-6 col-md-4 col-lg-2">
+    <button type="submit" class="btn btn-primary">I N S E R T A R</button>
+  </div>
+
+  <div class="form-group col-sm-6 col-md-4 col-lg-2">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      C O N S U L T A R
+    </button>
+  </div>
+    <div class="form-group col-sm-6 col-md-4 col-lg-2">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EliminarModal">
+      E L I M I N A R 
+    </button> </div>
+
+    <div class="form-group col-sm-6 col-md-4 col-lg-2">
+      <button id="btnMod" type="button" class="btn btn-warning" >
+        M O D I F I C A R 
+      </button> </div>
+
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">INFORMACION</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group col-sm-12 col-md-1 col-lg-8">
+          <label for="idID" class="form-label">ID</label>
+          <input type="number" name="idID" class="form-control" id="idID" placeholder="ID del Juego">
+      </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR (X)</button>
+        <button id="enviar" type="button" class="btn btn-primary" data-bs-dismiss="modal">OBTENER REGISTRO</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</form>
+
+
+<form action="./Eliminar.php" method="post"> 
+  <div class="modal fade" id="EliminarModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">ELIMINACION</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+  
+          <div class="form-group col-sm-12 col-md-1 col-lg-8">
+            <label for="idID" class="form-label">ID</label>
+            <input type="number" name="idID" class="form-control" id="idID" placeholder="ID del Juego">
+        </div>
+  
+  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR (X)</button>
+          <button  type="submit" class="btn btn-primary" data-bs-dismiss="modal">ELIMINAR REGISTRO</button>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script>
+ 
+
+
+document.getElementById("enviar").addEventListener("click", async function () {
+  var datosFormulario= new FormData(document.getElementById("formulario"));
+  let respuesta= await fetch ('Conexion.php',{
+    method: 'POST',
+    body: datosFormulario
+   })
+   
+  let dato =await respuesta.json();
+document.getElementById("idID").value=dato.ID;
+  document.getElementById("idAño").value=dato.Lanzamiento;
+  document.getElementById("idNom").value=dato.Nombre;
+  document.getElementById("idConsola").value=dato.Consola;
+  document.getElementById("idPrecio").value=dato.Precio;
+  document.getElementById("idEstado").value=dato.Estado;
+  document.getElementById("idMulti").value=dato.Crossplay;
+  document.getElementById("idGoty").value=dato.Premios;
+  document.getElementById("idSoporte").value=dato.Soporte;
+});
+  
+  </script>
+
+  <script>
+    document.getElementById("btnMod").addEventListener("click", async function () {
+  var datosFormulario= new FormData(document.getElementById("formulario"));
+  let respuesta= await fetch ('Modificar.php',{
+    method: 'POST',
+    body: datosFormulario
+   })
+  });
+  </script>
+</body>
+</html>
