@@ -1,0 +1,31 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo para cada libro */
+.book {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para títulos de libros */
+.book .title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilo para autores de libros */
+.book .author {
+    font-style: italic;
+}
+
+/* Estilo para género, precio, fecha de publicación y descripción */
+.book .genre,
+.book .price,
+.book .publish_date,
+.book .description {
+    margin-top: 10px;
+}
